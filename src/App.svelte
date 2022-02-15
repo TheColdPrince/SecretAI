@@ -79,11 +79,11 @@
 <main class="m-auto p-2" style="max-width: 700px;">
     <nav>
         <img id="logo" src="/favicon.png" alt="logo" />
-        <h2 class="text-center">EngineX</h2>
+        <h2 class="text-center">ZirconAI</h2>
         <a
             title="Give a star"
             target="_blank"
-            href="https://github.com/EricEchemane/OpenAI-Completer"
+            href="https://www.megaflash.xyz/blog"
             icon
         >
             <i class="bx bxl-github" id="github-icon" />
@@ -91,7 +91,7 @@
     </nav>
 
     <div class="py-1">
-        <h6 class="text-center">Your OpenAI Assistant | Eric Echemane</h6>
+        <h6 class="text-center">Your Free AI Assistant | MegaFlash XYZ</h6>
     </div>
 
     <div class="py-1">
