@@ -1,8 +1,8 @@
 <h1 align="center">
-  EngineX
+  Zircon AI
 </h1>
 <h6 align="center">
-  Your OpenAI Assistant
+  Your Free AI Assistant
 </h6>
 
 [![EngineX](./public/banner.png)](https://enginex.vercel.app)
