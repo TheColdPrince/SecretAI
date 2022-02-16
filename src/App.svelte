@@ -10,8 +10,8 @@
     let currentCommand;
     let buttonTitle = "Generate Answer";
     let answered = false;
-    let commandOptionsIsShown = false;
-    let disclaimerIsShown = true;
+    let commandOptionsIsShown = true;
+    let disclaimerIsShown = false;
 
     $: if (currentCommand) {
         query = currentCommand.command;
