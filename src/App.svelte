@@ -9,7 +9,7 @@
     let buttonTitle = "Generate Answer";
     let answered = false;
     let commandOptionsIsShown = false;
-    let disclaimerIsShown = true;
+    let disclaimerIsShown = false;
     $: if (currentCommand) {
         query = currentCommand.command;
         answered = false;
