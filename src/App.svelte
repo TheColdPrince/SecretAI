@@ -60,22 +60,6 @@
     }
 </script>
 
-{#if commandOptionsIsShown}
-    <CommandOptions {changeCurrentCommand} />
-{/if}
-{#if disclaimerIsShown}
-    <Disclaimer close={closeDisclaimer} />
-{/if}
-{#if commandOptionsIsShown || disclaimerIsShown}
-    <div
-        id="dimmer"
-        transition:fade={{ duration: 150 }}
-        on:click={() => {
-            commandOptionsIsShown = false;
-        }}
-    />
-{/if}
-
 <main class="m-auto p-2" style="max-width: 700px;">
     <nav>
         <img id="logo" src="/favicon.png" alt="logo" />
