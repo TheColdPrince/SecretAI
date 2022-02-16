@@ -1,7 +1,9 @@
 <script>
     import { fade } from "svelte/transition";
+
     import CommandOptions from "./components/commands.svelte";
     import Disclaimer from "./components/disclaimer.svelte";
+
     let query = "";
     let answer = "Answer will appear here";
     let isLoading = false;
@@ -9,19 +11,25 @@
     let buttonTitle = "Generate Answer";
     let answered = false;
     let commandOptionsIsShown = false;
-    let disclaimerIsShown = false;
+    let disclaimerIsShown = true;
+
     $: if (currentCommand) {
         query = currentCommand.command;
-        answered = true;
+        answered = false;
     }
+
     function handleChangeQuery(e) {
         answered = false;
         query = e.target.value;
     }
+
     const clearAnswer = () => (answer = "Answer will appear here");
+
     const toggleCommandOptions = () =>
         (commandOptionsIsShown = !commandOptionsIsShown);
+
     const closeDisclaimer = () => (disclaimerIsShown = false);
+
     function changeCurrentCommand(newCommand) {
         currentCommand = newCommand;
         query = currentCommand.command;
@@ -29,6 +37,7 @@
         commandOptionsIsShown = false;
         clearAnswer();
     }
+
     async function generateAnswer() {
         answered = false;
         isLoading = true;
@@ -62,7 +71,7 @@
         id="dimmer"
         transition:fade={{ duration: 150 }}
         on:click={() => {
-            commandOptionsIsShown = true;
+            commandOptionsIsShown = false;
         }}
     />
 {/if}
