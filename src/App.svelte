@@ -1,35 +1,27 @@
 <script>
     import { fade } from "svelte/transition";
-
     import CommandOptions from "./components/commands.svelte";
     import Disclaimer from "./components/disclaimer.svelte";
-
     let query = "";
     let answer = "Answer will appear here";
     let isLoading = false;
     let currentCommand;
     let buttonTitle = "Generate Answer";
     let answered = false;
-    let commandOptionsIsShown = true;
-    let disclaimerIsShown = false;
-
+    let commandOptionsIsShown = false;
+    let disclaimerIsShown = true;
     $: if (currentCommand) {
         query = currentCommand.command;
         answered = false;
     }
-
     function handleChangeQuery(e) {
         answered = false;
         query = e.target.value;
     }
-
     const clearAnswer = () => (answer = "Answer will appear here");
-
     const toggleCommandOptions = () =>
         (commandOptionsIsShown = !commandOptionsIsShown);
-
     const closeDisclaimer = () => (disclaimerIsShown = false);
-
     function changeCurrentCommand(newCommand) {
         currentCommand = newCommand;
         query = currentCommand.command;
@@ -37,7 +29,6 @@
         commandOptionsIsShown = false;
         clearAnswer();
     }
-
     async function generateAnswer() {
         answered = false;
         isLoading = true;
@@ -59,6 +50,22 @@
         answered = true;
     }
 </script>
+
+{#if commandOptionsIsShown}
+    <CommandOptions {changeCurrentCommand} />
+{/if}
+{#if disclaimerIsShown}
+    <Disclaimer close={closeDisclaimer} />
+{/if}
+{#if commandOptionsIsShown || disclaimerIsShown}
+    <div
+        id="dimmer"
+        transition:fade={{ duration: 150 }}
+        on:click={() => {
+            commandOptionsIsShown = false;
+        }}
+    />
+{/if}
 
 <main class="m-auto p-2" style="max-width: 700px;">
     <nav>
