@@ -12,7 +12,7 @@
     let disclaimerIsShown = false;
     $: if (currentCommand) {
         query = currentCommand.command;
-        answered = false;
+        answered = true;
     }
     function handleChangeQuery(e) {
         answered = false;
@@ -62,7 +62,7 @@
         id="dimmer"
         transition:fade={{ duration: 150 }}
         on:click={() => {
-            commandOptionsIsShown = false;
+            commandOptionsIsShown = true;
         }}
     />
 {/if}
