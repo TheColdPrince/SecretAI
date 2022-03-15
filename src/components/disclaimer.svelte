@@ -6,8 +6,8 @@
 <main transition:slide={{ duration: 128 }}>
     <h4 class="text-center" style="margin-bottom: .75rem;">Important!</h4>
     <p class="text-center" style="line-height: 190%;">
-        This application uses an OpenAI and maintaned by MegaFlash XYZ. If this application starts
-        to fail, it is likely due to the API key being overused. In that case,
+        This application uses a powerful AI and maintaned by Jomar Balmores and MegaFlash XYZ. If this application starts
+        to fail, it is likely due to being overused. In that case,
         please contact us if you have something to help.
     </p>
     <hr />
