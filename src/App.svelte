@@ -83,7 +83,7 @@
         <a
             title="Give a star"
             target="_blank"
-            href="https://www.megaflash.xyz/blog"
+            href="https://www.megaflash.xyz/p/blog.html"
             icon
         >
             <i class="bx bxl-github" id="github-icon" />
