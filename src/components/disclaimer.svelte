@@ -6,11 +6,7 @@
 <main transition:slide={{ duration: 128 }}>
     <h4 class="text-center" style="margin-bottom: .75rem;">Important!</h4>
     <p class="text-center" style="line-height: 190%;">
-        This application uses a powerful AI and maintaned by Jomar Balmores and MegaFlash XYZ. If this application starts
-        to fail, it is likely due to being overused. In that case,
-        please contact us if you have something to help.
-    </p>
-    <hr />
+We will now shut down this application by MegaFlash XYZ in the following months; this application is too expensive to maintain, intendedly planned for two months only.    <hr />
     <button on:click={close}> I understand </button>
 </main>
 
